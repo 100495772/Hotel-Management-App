@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_checkout_tests.TestDeliverProduct-20240411175915" tests="7" file="test_checkout_tests.py" time="0.106" timestamp="2024-04-11T17:59:15" failures="0" errors="7" skipped="0">
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_already_checkout" time="0.073" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_checkin_code_not_found_date_signature" time="0.007" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_checkout_ok" time="0.006" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_bad_date_signature" time="0.005" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_no_date" time="0.006" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_no_store_check_in" time="0.004" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_store_check_in_is_empty" time="0.004" timestamp="2024-04-11T17:59:15">
+		<error type="HotelManagementException" message="Error: file input not found"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 47, in setUp
+    my_manager.guest_arrival(file_test)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 111, in guest_arrival
+    input_list = self.load_json_store(file_input, "Error: file input not found")
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 196, in load_json_store
+    raise HotelManagementException(message) from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Error: file input not found
+]]></error>
+	</testcase>
+</testsuite>

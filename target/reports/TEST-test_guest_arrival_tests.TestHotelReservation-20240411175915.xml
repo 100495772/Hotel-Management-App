@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_guest_arrival_tests.TestHotelReservation-20240411175915" tests="3" file="test_guest_arrival_tests.py" time="0.025" timestamp="2024-04-11T17:59:15" failures="1" errors="2" skipped="0">
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_case_valid_reservation_invalid_arrival_date" time="0.009" timestamp="2024-04-11T17:59:15">
+		<failure type="AssertionError" message="'Error: file input not found' != 'Error: today is not reservation date'
+- Error: file input not found
++ Error: today is not reservation date
+"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 634, in run
+    self._callTestMethod(testMethod)
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 589, in _callTestMethod
+    if method() is not None:
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 75, in test_case_valid_reservation_invalid_arrival_date
+    self.assertEqual(c_m.exception.message, "Error: today is not reservation date")
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 885, in assertEqual
+    assertion_func(first, second, msg=msg)
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 1251, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 715, in fail
+    raise self.failureException(msg)
+    ^^^^^^^^^^^^^^^^^
+AssertionError: 'Error: file input not found' != 'Error: today is not reservation date'
+- Error: file input not found
++ Error: today is not reservation date
+
+]]></failure>
+	</testcase>
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_get_reservation_data_manipulated_tests" time="0.009" timestamp="2024-04-11T17:59:15">
+		<error type="FileNotFoundError" message="[Errno 2] No such file or directory: 'c:\\users\\davidmaba\\pycharmprojects\\g88.2024.t01.eg3\\src\\main\\python\\uc3m_travel\\../../../unittest/JSONFiles//guestarrival/store_reservation_manipulated.json'"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 634, in run
+    self._callTestMethod(testMethod)
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 589, in _callTestMethod
+    if method() is not None:
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 145, in test_get_reservation_data_manipulated_tests
+    shutil.copy(JSON_FILES_GUEST_ARRIVAL + "store_reservation_manipulated.json",
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 423, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+    ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\users\\davidmaba\\pycharmprojects\\g88.2024.t01.eg3\\src\\main\\python\\uc3m_travel\\../../../unittest/JSONFiles//guestarrival/store_reservation_manipulated.json'
+]]></error>
+	</testcase>
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_parametrized_cases_tests" time="0.008" timestamp="2024-04-11T17:59:15">
+		<error type="FileNotFoundError" message="[Errno 2] No such file or directory: 'c:\\users\\davidmaba\\pycharmprojects\\g88.2024.t01.eg3\\src\\main\\python\\uc3m_travel\\../../../unittest/JSONFiles/GE2_TestCasesTemplate_2024_F2.csv'"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 634, in run
+    self._callTestMethod(testMethod)
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 589, in _callTestMethod
+    if method() is not None:
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 91, in test_parametrized_cases_tests
+    with open(my_cases, newline='', encoding='utf-8') as csvfile:
+    ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\users\\davidmaba\\pycharmprojects\\g88.2024.t01.eg3\\src\\main\\python\\uc3m_travel\\../../../unittest/JSONFiles/GE2_TestCasesTemplate_2024_F2.csv'
+]]></error>
+	</testcase>
+</testsuite>

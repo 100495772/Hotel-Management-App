@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_checkout_tests.TestDeliverProduct-20240411173335" tests="7" file="test_checkout_tests.py" time="0.101" timestamp="2024-04-11T17:33:36" failures="0" errors="7" skipped="0">
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_already_checkout" time="0.070" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_checkin_code_not_found_date_signature" time="0.005" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_checkout_ok" time="0.005" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_bad_date_signature" time="0.005" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_no_date" time="0.005" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_no_store_check_in" time="0.005" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_checkout_tests.TestDeliverProduct" name="test_guest_checkout_store_check_in_is_empty" time="0.006" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "C:\Users\Davidmaba\PycharmProjects\G88.2024.T01.EG3\.venv\Lib\site-packages\freezegun\api.py", line 827, in wrapper
+    result = func(*args, **kwargs)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_checkout_tests.py", line 38, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+</testsuite>

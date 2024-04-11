@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_guest_arrival_tests.TestHotelReservation-20240411173335" tests="3" file="test_guest_arrival_tests.py" time="0.010" timestamp="2024-04-11T17:33:36" failures="0" errors="3" skipped="0">
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_case_valid_reservation_invalid_arrival_date" time="0.003" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 37, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_get_reservation_data_manipulated_tests" time="0.004" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 37, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+	<testcase classname="test_guest_arrival_tests.TestHotelReservation" name="test_parametrized_cases_tests" time="0.003" timestamp="2024-04-11T17:33:36">
+		<error type="HotelManagementException" message="Wrong file  or file path"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 58, in testPartExecutor
+    yield
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 630, in run
+    self._callSetUp()
+  File "C:\Users\Davidmaba\AppData\Local\Programs\Python\Python312\Lib\unittest\case.py", line 586, in _callSetUp
+    self.setUp()
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\unittest\python\test_guest_arrival_tests.py", line 37, in setUp
+    localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 98, in room_reservation
+    self.dump_list(data_list, file_store)
+    ^^^^^^^^^^^^^^^^^
+  File "c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\src\main\python\uc3m_travel\hotel_manager.py", line 107, in dump_list
+    raise HotelManagementException("Wrong file  or file path") from ex
+    ^^^^^^^^^^^^^^^^^
+src.main.python.uc3m_travel.hotel_management_exception.HotelManagementException: Wrong file  or file path
+]]></error>
+	</testcase>
+</testsuite>
