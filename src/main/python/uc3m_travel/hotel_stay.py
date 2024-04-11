@@ -2,8 +2,6 @@
 from datetime import datetime
 import hashlib
 
-import re
-
 class HotelStay():
     """Class for representing hotel stays"""
     def __init__(self,

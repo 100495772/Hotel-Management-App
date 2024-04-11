@@ -2,11 +2,12 @@
 import re
 import json
 from datetime import datetime
+from freezegun import freeze_time
+
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 from src.main.python.uc3m_travel.hotel_reservation import HotelReservation
 from src.main.python.uc3m_travel.hotel_stay import HotelStay
 from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
-from freezegun import freeze_time
 from src.main.python.uc3m_travel.attributes.attribute_id_card import IdCard
 from src.main.python.uc3m_travel.attributes.attribute_room_type import RoomType
 from src.main.python.uc3m_travel.attributes.attribute_arrivaldate import ArrivalDate
@@ -51,8 +52,8 @@ class HotelManager:
                                    arrival="20/01/2024")
         except KeyError as exception:
             raise HotelManagementException("JSON Decode Error - Invalid JSON Key") from exception
-        if not self.validatecreditcard(creditCard):
-            raise HotelManagementException("Invalid credit card number")
+        #if not self.validatecreditcard(creditCard):
+            #raise HotelManagementException("Invalid credit card number")
         # Close the file
         return req
 
@@ -67,11 +68,7 @@ class HotelManager:
                          num_days:int)->str:
         """ Manages the hotel reservation: creates a reservation and saves it into a json file"""
 
-        # we validate these attributes using methods of this class because these attributes are present both in
-        # HotelStay and HotelReservation, so we would be duplicating code if we moved the validate methods
-        # to each class. However, for name_surname, credit card and phone number, since
-        # those attribute only appear in HotelReservation, we move their validation methods to their class
-        # and call them in the constructor
+        # we use the extracted attribute classes to validate
         room_type = str(RoomType(room_type))
         id_card = str(IdCard(id_card))
         arrival_date = str(ArrivalDate(arrival_date))
@@ -120,7 +117,7 @@ class HotelManager:
         except KeyError as exception:
             raise HotelManagementException("Error - Invalid Key in JSON") from exception
 
-        #validate idCcard and localizer
+        #validate idCcard and localizer using extracted classes
         my_id_card = str(IdCard(my_id_card))
         my_localizer = str(Localizer(my_localizer))
 

@@ -1,13 +1,10 @@
 """Hotel reservation class"""
 import hashlib
 from datetime import datetime
-import re
 from src.main.python.uc3m_travel.attributes.attribute_phone_number import PhoneNumber
 from src.main.python.uc3m_travel.attributes.attribute_name_surname import Name
 from src.main.python.uc3m_travel.attributes.attribute_credit_card import CreditCard
 
-
-from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 class HotelReservation:
     """Class for representing hotel reservations"""
@@ -51,7 +48,7 @@ class HotelReservation:
         return self.__credit_card_number
     @credit_card.setter
     def credit_card(self, value):
-        self.__credit_card_number = self.validatecreditcard(value)
+        self.__credit_card_number = value
 
     @property
     def id_card(self):
