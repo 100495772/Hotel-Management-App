@@ -1,5 +1,7 @@
 #   -*- coding: utf-8 -*-
 from pybuilder.core import use_plugin, init
+import sys
+import os
 
 use_plugin("python.core")
 use_plugin("python.unittest")
@@ -14,4 +16,5 @@ default_task = "publish"
 
 @init
 def set_properties(project):
-    pass
+    src_parent_dir = os.path.abspath(os.path.join(project.basedir, 'src', '..'))
+    sys.path.append(src_parent_dir)
