@@ -7,21 +7,17 @@ from src.main.python.uc3m_travel.hotel_reservation import HotelReservation
 from src.main.python.uc3m_travel.hotel_stay import HotelStay
 from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from freezegun import freeze_time
+from src.main.python.uc3m_travel.attributes.attribute_id_card import IdCard
+from src.main.python.uc3m_travel.attributes.attribute_room_type import RoomType
+from src.main.python.uc3m_travel.attributes.attribute_arrivaldate import ArrivalDate
+from src.main.python.uc3m_travel.attributes.attribute_localizer import Localizer
+from src.main.python.uc3m_travel.attributes.attribute_room_key import RoomKey
 
 
 class HotelManager:
     """Class with all the methods for managing reservations and stays"""
     def __init__(self):
         pass
-
-
-    def validate_arrival_date(self, arrival_date):
-        """validates the arrival date format  using regex"""
-        myregex = re.compile(r"^(([0-2]\d|-3[0-1])\/(0\d|1[0-2])\/\d\d\d\d)$")
-        res = myregex.fullmatch(arrival_date)
-        if not res:
-            raise HotelManagementException("Invalid date format")
-        return arrival_date
 
     def validate_numdays(self,num_days):
         """validates the number of days"""
@@ -33,50 +29,6 @@ class HotelManager:
             raise HotelManagementException("Numdays should be in the range 1-10")
         return num_days
 
-
-    @staticmethod
-    def validate_dni_letter(dni):
-        """RETURN TRUE IF THE DNI IS RIGHT, OR FALSE IN OTHER CASE"""
-        letter_mapping = {"0": "T", "1": "R", "2": "W", "3": "A", "4": "G", "5": "M",
-             "6": "Y", "7": "F", "8": "P", "9": "D", "10": "X", "11": "B",
-             "12": "N", "13": "J", "14": "Z", "15": "S", "16": "Q", "17": "V",
-             "18": "H", "19": "L", "20": "C", "21": "K", "22": "E"}
-        din_digits = int(dni[0:8])
-        remainder = str(din_digits % 23)
-        return dni[8] == letter_mapping[remainder]
-
-    def validate_dni(self, id_card):
-        regex = r'^[0-9]{8}[A-Z]{1}$'
-        my_regex = re.compile(regex)
-        if not my_regex.fullmatch(id_card):
-            raise HotelManagementException("Invalid IdCard format")
-        if not self.validate_dni_letter(id_card):
-            raise HotelManagementException("Invalid IdCard letter")
-        return id_card
-
-    def validate_localizer(self, localizer):
-        """validates the localizer format using a regex"""
-        regex = r'^[a-fA-F0-9]{32}$'
-        myregex = re.compile(regex)
-        if not myregex.fullmatch(localizer):
-            raise HotelManagementException("Invalid localizer")
-        return localizer
-
-    def validate_roomkey(self, roomKey):
-        """validates the roomkey format using a regex"""
-        regex = r'^[a-fA-F0-9]{64}$'
-        myregex = re.compile(regex)
-        if not myregex.fullmatch(roomKey):
-            raise HotelManagementException("Invalid room key format")
-        return roomKey
-
-    def validate_room_type(self, room_type):
-        """validates the room type value using regex"""
-        myregex = re.compile(r"(SINGLE|DOUBLE|SUITE)")
-        res = myregex.fullmatch(room_type)
-        if not res:
-            raise HotelManagementException("Invalid roomtype value")
-        return room_type
 
     def read_data_from_json(self, file):
         """reads the content of a json file with two fields: CreditCard and phoneNumber"""
@@ -120,9 +72,9 @@ class HotelManager:
         # to each class. However, for name_surname, credit card and phone number, since
         # those attribute only appear in HotelReservation, we move their validation methods to their class
         # and call them in the constructor
-        room_type = self.validate_room_type(room_type)
-        id_card = self.validate_dni(id_card)
-        arrival_date = self.validate_arrival_date(arrival_date)
+        room_type = str(RoomType(room_type))
+        id_card = str(IdCard(id_card))
+        arrival_date = str(ArrivalDate(arrival_date))
         num_days = self.validate_numdays(num_days)
         my_reservation = HotelReservation(id_card=id_card,
                                           credit_card_number=credit_card,
@@ -169,8 +121,8 @@ class HotelManager:
             raise HotelManagementException("Error - Invalid Key in JSON") from exception
 
         #validate idCcard and localizer
-        self.validate_dni(my_id_card)
-        self.validate_localizer(my_localizer)
+        my_id_card = str(IdCard(my_id_card))
+        my_localizer = str(Localizer(my_localizer))
 
         # look in reservation store
         file_store = JSON_FILES_PATH + "store_reservation.json"
@@ -263,7 +215,7 @@ class HotelManager:
 
     def guest_checkout(self, room_key:str)->bool:
         """manages the checkout of a guest"""
-        self.validate_roomkey(room_key)
+        room_key = str(RoomKey(room_key))
 
         #check that the roomkey is stored in the checkins file
         file_store = JSON_FILES_PATH + "store_check_in.json"

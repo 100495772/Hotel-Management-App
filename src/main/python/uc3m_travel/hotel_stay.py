@@ -1,6 +1,7 @@
 ''' Class HotelStay (GE2.2) '''
 from datetime import datetime
 import hashlib
+
 import re
 
 class HotelStay():
