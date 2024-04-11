@@ -1,6 +1,8 @@
 """Hotel reservation class"""
 import hashlib
 from datetime import datetime
+import re
+from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 class HotelReservation:
     """Class for representing hotel reservations"""
@@ -14,13 +16,13 @@ class HotelReservation:
                  arrival:str,
                  num_days:int):
         """constructor of reservation objects"""
-        self.__credit_card_number = credit_card_number
+        self.__credit_card_number = self.validatecreditcard(credit_card_number)
         self.__id_card = id_card
         justnow = datetime.utcnow()
         self.__arrival = arrival
         self.__reservation_date = datetime.timestamp(justnow)
-        self.__name_surname = name_surname
-        self.__phone_number = phone_number
+        self.__name_surname = self.validate_name(name_surname)
+        self.__phone_number = self.validate_phonenumber(phone_number)
         self.__room_type = room_type
         self.__num_days = num_days
         self.__localizer =  hashlib.md5(str(self).encode()).hexdigest()
@@ -44,7 +46,7 @@ class HotelReservation:
         return self.__credit_card_number
     @credit_card.setter
     def credit_card(self, value):
-        self.__credit_card_number = value
+        self.__credit_card_number = self.validatecreditcard(value)
 
     @property
     def id_card(self):
@@ -59,3 +61,47 @@ class HotelReservation:
     def localizer(self):
         """Returns the md5 signature"""
         return self.__localizer
+
+
+    def validate_name(self, name_surname):
+        regex = r"^(?=^.{10,50}$)([a-zA-Z]+(\s[a-zA-Z]+)+)$"
+        myregex = re.compile(regex)
+        regex_matches = myregex.fullmatch(name_surname)
+        if not regex_matches:
+            raise HotelManagementException("Invalid name format")
+        return name_surname
+
+    def validatecreditcard(self, creditCard):
+        """validates the credit card number using luhn altorithm"""
+        #taken form
+        # https://allwin-raju-12.medium.com/
+        # credit-card-number-validation-using-luhns-algorithm-in-python-c0ed2fac6234
+        # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
+        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
+
+        myregex = re.compile(r"^[0-9]{16}")
+        res = myregex.fullmatch(creditCard)
+        if not res:
+            raise HotelManagementException("Invalid credit card format")
+        def digits_of(n):
+            return [int(d) for d in str(n)]
+
+
+        digits = digits_of(creditCard)
+        odd_digits = digits[-1::-2]
+        even_digits = digits[-2::-2]
+        checksum = 0
+        checksum += sum(odd_digits)
+        for d in even_digits:
+            checksum += sum(digits_of(d * 2))
+        if not checksum % 10 == 0:
+            raise HotelManagementException("Invalid credit card number (not luhn)")
+        return creditCard
+
+    def validate_phonenumber(self, phone_number):
+        """validates the phone number format  using regex"""
+        myregex = re.compile(r"^(\+)[0-9]{9}")
+        res = myregex.fullmatch(phone_number)
+        if not res:
+            raise HotelManagementException("Invalid phone number format")
+        return phone_number
