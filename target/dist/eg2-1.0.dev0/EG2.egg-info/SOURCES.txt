@@ -22,3 +22,8 @@ uc3m_travel/attributes/attribute_name_surname.py
 uc3m_travel/attributes/attribute_phone_number.py
 uc3m_travel/attributes/attribute_room_key.py
 uc3m_travel/attributes/attribute_room_type.py
+uc3m_travel/storage/__init__.py
+uc3m_travel/storage/checkout_json_store.py
+uc3m_travel/storage/json_store.py
+uc3m_travel/storage/reservation_json_store.py
+uc3m_travel/storage/stay_json_store.py

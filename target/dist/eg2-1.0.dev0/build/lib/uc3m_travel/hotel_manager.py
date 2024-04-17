@@ -13,6 +13,7 @@ from src.main.python.uc3m_travel.attributes.attribute_room_type import RoomType
 from src.main.python.uc3m_travel.attributes.attribute_arrivaldate import ArrivalDate
 from src.main.python.uc3m_travel.attributes.attribute_localizer import Localizer
 from src.main.python.uc3m_travel.attributes.attribute_room_key import RoomKey
+from src.main.python.uc3m_travel.storage.reservation_json_store import ReservationJsonStore
 
 
 class HotelManager:
@@ -81,21 +82,9 @@ class HotelManager:
                                           arrival=arrival_date,
                                           num_days=num_days)
 
+        reservation_store = ReservationJsonStore()
         # escribo el fichero Json con todos los datos
-        file_store = JSON_FILES_PATH + "store_reservation.json"
-        data_list = self.load_json_list(file_store)
-
-        #compruebo que esta reserva no esta en la lista
-        for item in data_list:
-            if my_reservation.localizer == item["_HotelReservation__localizer"]:
-                raise HotelManagementException ("Reservation already exists")
-            if my_reservation.id_card == item["_HotelReservation__id_card"]:
-                raise HotelManagementException("This ID card has another reservation")
-        #añado los datos de mi reserva a la lista , a lo que hubiera
-        data_list.append(my_reservation.__dict__)
-
-        #escribo la lista en el fichero
-        self.dump_list(data_list, file_store)
+        reservation_store.save_reservation(my_reservation)
 
         return my_reservation.localizer
 

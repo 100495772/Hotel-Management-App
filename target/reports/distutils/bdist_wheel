@@ -27,6 +27,12 @@ copying uc3m_travel\attributes\attribute_phone_number.py -> build\lib\uc3m_trave
 copying uc3m_travel\attributes\attribute_room_key.py -> build\lib\uc3m_travel\attributes
 copying uc3m_travel\attributes\attribute_room_type.py -> build\lib\uc3m_travel\attributes
 copying uc3m_travel\attributes\__init__.py -> build\lib\uc3m_travel\attributes
+creating build\lib\uc3m_travel\storage
+copying uc3m_travel\storage\checkout_json_store.py -> build\lib\uc3m_travel\storage
+copying uc3m_travel\storage\json_store.py -> build\lib\uc3m_travel\storage
+copying uc3m_travel\storage\reservation_json_store.py -> build\lib\uc3m_travel\storage
+copying uc3m_travel\storage\stay_json_store.py -> build\lib\uc3m_travel\storage
+copying uc3m_travel\storage\__init__.py -> build\lib\uc3m_travel\storage
 c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\.pybuilder\plugins\cpython-3.12.0.final.0\Lib\site-packages\setuptools\_distutils\cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
 !!
 
@@ -62,6 +68,12 @@ copying build\lib\uc3m_travel\hotel_management_exception.py -> build\bdist.win-a
 copying build\lib\uc3m_travel\hotel_manager.py -> build\bdist.win-amd64\wheel\.\uc3m_travel
 copying build\lib\uc3m_travel\hotel_reservation.py -> build\bdist.win-amd64\wheel\.\uc3m_travel
 copying build\lib\uc3m_travel\hotel_stay.py -> build\bdist.win-amd64\wheel\.\uc3m_travel
+creating build\bdist.win-amd64\wheel\uc3m_travel\storage
+copying build\lib\uc3m_travel\storage\checkout_json_store.py -> build\bdist.win-amd64\wheel\.\uc3m_travel\storage
+copying build\lib\uc3m_travel\storage\json_store.py -> build\bdist.win-amd64\wheel\.\uc3m_travel\storage
+copying build\lib\uc3m_travel\storage\reservation_json_store.py -> build\bdist.win-amd64\wheel\.\uc3m_travel\storage
+copying build\lib\uc3m_travel\storage\stay_json_store.py -> build\bdist.win-amd64\wheel\.\uc3m_travel\storage
+copying build\lib\uc3m_travel\storage\__init__.py -> build\bdist.win-amd64\wheel\.\uc3m_travel\storage
 copying build\lib\uc3m_travel\__init__.py -> build\bdist.win-amd64\wheel\.\uc3m_travel
 copying build\lib\__init__.py -> build\bdist.win-amd64\wheel\.
 running install_egg_info
@@ -93,6 +105,11 @@ adding 'uc3m_travel/attributes/attribute_name_surname.py'
 adding 'uc3m_travel/attributes/attribute_phone_number.py'
 adding 'uc3m_travel/attributes/attribute_room_key.py'
 adding 'uc3m_travel/attributes/attribute_room_type.py'
+adding 'uc3m_travel/storage/__init__.py'
+adding 'uc3m_travel/storage/checkout_json_store.py'
+adding 'uc3m_travel/storage/json_store.py'
+adding 'uc3m_travel/storage/reservation_json_store.py'
+adding 'uc3m_travel/storage/stay_json_store.py'
 adding 'EG2-1.0.dev0.dist-info/METADATA'
 adding 'EG2-1.0.dev0.dist-info/WHEEL'
 adding 'EG2-1.0.dev0.dist-info/namespace_packages.txt'

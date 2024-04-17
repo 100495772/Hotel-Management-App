@@ -45,7 +45,8 @@ if __name__ == '__main__':
         packages = [
             '.',
             'uc3m_travel',
-            'uc3m_travel.attributes'
+            'uc3m_travel.attributes',
+            'uc3m_travel.storage'
         ],
         namespace_packages = [],
         py_modules = [],

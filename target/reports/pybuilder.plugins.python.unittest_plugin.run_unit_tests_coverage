@@ -14,8 +14,13 @@ uc3m_travel\attributes\attribute_room_key.py           6      0      0      0   
 uc3m_travel\attributes\attribute_room_type.py          6      0      0      0   100%
 uc3m_travel\hotel_management_config.py                 3      0      0      0   100%
 uc3m_travel\hotel_management_exception.py             10      1      4      0    93%
-uc3m_travel\hotel_manager.py                         147     20     52      3    85%
+uc3m_travel\hotel_manager.py                         141     20     46      3    84%
 uc3m_travel\hotel_reservation.py                      35      3     10      0    93%
 uc3m_travel\hotel_stay.py                             38      7     16      0    87%
+uc3m_travel\storage\__init__.py                        0      0      0      0   100%
+uc3m_travel\storage\checkout_json_store.py             0      0      0      0   100%
+uc3m_travel\storage\json_store.py                     20      4      6      1    81%
+uc3m_travel\storage\reservation_json_store.py         15      0      6      0   100%
+uc3m_travel\storage\stay_json_store.py                 0      0      0      0   100%
 ------------------------------------------------------------------------------------
-TOTAL                                                331     36     94      3    89%
+TOTAL                                                360     40    100      4    89%

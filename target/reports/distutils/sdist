@@ -20,6 +20,7 @@ creating EG2-1.0.dev0
 creating EG2-1.0.dev0\EG2.egg-info
 creating EG2-1.0.dev0\uc3m_travel
 creating EG2-1.0.dev0\uc3m_travel\attributes
+creating EG2-1.0.dev0\uc3m_travel\storage
 copying files to EG2-1.0.dev0...
 copying __init__.py -> EG2-1.0.dev0
 copying setup.py -> EG2-1.0.dev0
@@ -45,6 +46,11 @@ copying uc3m_travel\attributes\attribute_name_surname.py -> EG2-1.0.dev0\uc3m_tr
 copying uc3m_travel\attributes\attribute_phone_number.py -> EG2-1.0.dev0\uc3m_travel\attributes
 copying uc3m_travel\attributes\attribute_room_key.py -> EG2-1.0.dev0\uc3m_travel\attributes
 copying uc3m_travel\attributes\attribute_room_type.py -> EG2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\storage\__init__.py -> EG2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\checkout_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\reservation_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\stay_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
 copying EG2.egg-info\SOURCES.txt -> EG2-1.0.dev0\EG2.egg-info
 Writing EG2-1.0.dev0\setup.cfg
 creating dist
