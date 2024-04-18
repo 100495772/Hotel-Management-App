@@ -24,3 +24,16 @@ class JsonStore():
                 json.dump(data_list, file, indent=2)
         except FileNotFoundError as ex:
             raise HotelManagementException("Wrong file  or file path") from ex
+    @classmethod
+    def load_json_store(cls, file_store, message):
+        # leo los datos del fichero , si no existe deber dar error porque el almacen de reservaa
+        # debe existir para hacer el checkin
+        try:
+            with open(file_store, "r", encoding="utf-8", newline="") as file:
+                store_list = json.load(file)
+        except FileNotFoundError as ex:
+            raise HotelManagementException(message) from ex
+        except json.JSONDecodeError as ex:
+            raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex
+        return store_list
+

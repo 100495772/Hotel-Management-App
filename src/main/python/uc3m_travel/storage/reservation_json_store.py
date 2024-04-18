@@ -5,9 +5,6 @@ from src.main.python.uc3m_travel.hotel_management_exception import HotelManageme
 
 class ReservationJsonStore(JsonStore):
     """ReservationJsonStore singleton class"""
-
-    _file_name = JSON_FILES_PATH + "store_reservation.json"
-
     def save_reservation(self, my_reservation):
         file_store = JSON_FILES_PATH + "store_reservation.json"
         data_list = self.load_json_list(file_store)
