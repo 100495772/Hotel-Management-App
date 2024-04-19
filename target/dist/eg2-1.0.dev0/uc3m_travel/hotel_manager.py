@@ -1,19 +1,12 @@
 """Module for the hotel manager"""
-import re
 import json
-from datetime import datetime
-from freezegun import freeze_time
-
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 from src.main.python.uc3m_travel.hotel_reservation import HotelReservation
 from src.main.python.uc3m_travel.hotel_stay import HotelStay
-from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from src.main.python.uc3m_travel.attributes.attribute_id_card import IdCard
 from src.main.python.uc3m_travel.attributes.attribute_room_type import RoomType
 from src.main.python.uc3m_travel.attributes.attribute_arrivaldate import ArrivalDate
-from src.main.python.uc3m_travel.attributes.attribute_localizer import Localizer
 from src.main.python.uc3m_travel.attributes.attribute_room_key import RoomKey
-from src.main.python.uc3m_travel.storage.json_store import JsonStore
 from src.main.python.uc3m_travel.storage.reservation_json_store import ReservationJsonStore
 from src.main.python.uc3m_travel.storage.stay_json_store import StayJsonStore
 from src.main.python.uc3m_travel.storage.checkout_json_store import CheckoutJsonStore
@@ -93,51 +86,12 @@ class HotelManager:
 
     def guest_arrival(self, file_input:str)->str:
         """manages the arrival of a guest with a reservation"""
-        input_list = JsonStore.load_json_store(file_input, "Error: file input not found")
-
-        # comprobar valores del fichero
-        try:
-            my_localizer = input_list["Localizer"]
-            my_id_card = input_list["IdCard"]
-        except KeyError as exception:
-            raise HotelManagementException("Error - Invalid Key in JSON") from exception
-
-        #validate idCcard and localizer using extracted classes
-        my_id_card = str(IdCard(my_id_card))
-        my_localizer = str(Localizer(my_localizer))
-
-        reservation_data = StayJsonStore.find_reservation(my_id_card, my_localizer)
-
-        # regenerate key and check if it matches
-        reservation_date = datetime.fromtimestamp(reservation_data["_HotelReservation__reservation_date"])
-
-        with freeze_time(reservation_date):
-            new_reservation = HotelReservation(credit_card_number=reservation_data["_HotelReservation__credit_card_number"],
-                                               id_card=reservation_data["_HotelReservation__id_card"],
-                                               num_days=reservation_data["_HotelReservation__num_days"],
-                                               room_type=reservation_data["_HotelReservation__room_type"],
-                                               arrival=reservation_data["_HotelReservation__arrival"],
-                                               name_surname=reservation_data["_HotelReservation__name_surname"],
-                                               phone_number=reservation_data["_HotelReservation__phone_number"])
-        if new_reservation.localizer != my_localizer:
-            raise HotelManagementException("Error: reservation has been manipulated")
-
-        # compruebo si hoy es la fecha de checkin
-        reservation_format = "%d/%m/%Y"
-        date_obj = datetime.strptime(reservation_data["_HotelReservation__arrival"], reservation_format)
-        if date_obj.date()!= datetime.date(datetime.utcnow()):
-            raise HotelManagementException("Error: today is not reservation date")
-
-        # genero la room key para ello llamo a Hotel Stay
-        my_checkin = HotelStay(idcard=my_id_card, numdays=int(reservation_data["_HotelReservation__num_days"]),
-                               localizer=my_localizer, roomtype=reservation_data["_HotelReservation__room_type"])
-
+        my_checkin = HotelStay.create_guest_arrival_from_file(file_input)
         # Save the stay in the stay store
         stay_store = StayJsonStore()
         stay_store.save_stay(my_checkin)
 
         return my_checkin.room_key
-
 
     def guest_checkout(self, room_key:str)->bool:
         """manages the checkout of a guest"""

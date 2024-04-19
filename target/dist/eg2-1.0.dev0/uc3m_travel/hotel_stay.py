@@ -1,6 +1,10 @@
 ''' Class HotelStay (GE2.2) '''
 from datetime import datetime
 import hashlib
+from src.main.python.uc3m_travel.storage.json_store import JsonStore
+from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
+from src.main.python.uc3m_travel.hotel_reservation import HotelReservation
+
 
 class HotelStay():
     """Class for representing hotel stays"""
@@ -64,3 +68,28 @@ class HotelStay():
     def departure(self, value):
         """returns the value of the departure date"""
         self.__departure = value
+
+    @classmethod
+    def create_guest_arrival_from_file(cls, file_input):
+        input_list = JsonStore.load_json_store(file_input, "Error: file input not found")
+
+        # comprobar valores del fichero
+        try:
+            my_localizer = input_list["Localizer"]
+            my_id_card = input_list["IdCard"]
+        except KeyError as exception:
+            raise HotelManagementException("Error - Invalid Key in JSON") from exception
+
+        new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
+
+        # compruebo si hoy es la fecha de checkin
+        reservation_format = "%d/%m/%Y"
+        date_obj = datetime.strptime(new_reservation.arrival, reservation_format)
+        if date_obj.date()!= datetime.date(datetime.utcnow()):
+            raise HotelManagementException("Error: today is not reservation date")
+
+        # genero la room key para ello llamo a Hotel Stay
+        my_checkin = cls(idcard=my_id_card, numdays=int(new_reservation.num_days),
+                               localizer=my_localizer, roomtype=new_reservation.room_type)
+
+        return my_checkin
