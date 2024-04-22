@@ -16,43 +16,43 @@ writing manifest file 'EG2.egg-info\SOURCES.txt'
 warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
 
 running check
-creating EG2-1.0.dev0
-creating EG2-1.0.dev0\EG2.egg-info
-creating EG2-1.0.dev0\uc3m_travel
-creating EG2-1.0.dev0\uc3m_travel\attributes
-creating EG2-1.0.dev0\uc3m_travel\storage
-copying files to EG2-1.0.dev0...
-copying __init__.py -> EG2-1.0.dev0
-copying setup.py -> EG2-1.0.dev0
-copying EG2.egg-info\PKG-INFO -> EG2-1.0.dev0\EG2.egg-info
-copying EG2.egg-info\SOURCES.txt -> EG2-1.0.dev0\EG2.egg-info
-copying EG2.egg-info\dependency_links.txt -> EG2-1.0.dev0\EG2.egg-info
-copying EG2.egg-info\namespace_packages.txt -> EG2-1.0.dev0\EG2.egg-info
-copying EG2.egg-info\top_level.txt -> EG2-1.0.dev0\EG2.egg-info
-copying EG2.egg-info\zip-safe -> EG2-1.0.dev0\EG2.egg-info
-copying uc3m_travel\__init__.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\hotel_management_config.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\hotel_management_exception.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\hotel_manager.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\hotel_reservation.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\hotel_stay.py -> EG2-1.0.dev0\uc3m_travel
-copying uc3m_travel\attributes\__init__.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_arrivaldate.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_credit_card.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_id_card.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_localizer.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_name_surname.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_phone_number.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_room_key.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\attributes\attribute_room_type.py -> EG2-1.0.dev0\uc3m_travel\attributes
-copying uc3m_travel\storage\__init__.py -> EG2-1.0.dev0\uc3m_travel\storage
-copying uc3m_travel\storage\checkout_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
-copying uc3m_travel\storage\json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
-copying uc3m_travel\storage\reservation_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
-copying uc3m_travel\storage\stay_json_store.py -> EG2-1.0.dev0\uc3m_travel\storage
-copying EG2.egg-info\SOURCES.txt -> EG2-1.0.dev0\EG2.egg-info
-Writing EG2-1.0.dev0\setup.cfg
+creating eg2-1.0.dev0
+creating eg2-1.0.dev0\EG2.egg-info
+creating eg2-1.0.dev0\uc3m_travel
+creating eg2-1.0.dev0\uc3m_travel\attributes
+creating eg2-1.0.dev0\uc3m_travel\storage
+copying files to eg2-1.0.dev0...
+copying __init__.py -> eg2-1.0.dev0
+copying setup.py -> eg2-1.0.dev0
+copying EG2.egg-info\PKG-INFO -> eg2-1.0.dev0\EG2.egg-info
+copying EG2.egg-info\SOURCES.txt -> eg2-1.0.dev0\EG2.egg-info
+copying EG2.egg-info\dependency_links.txt -> eg2-1.0.dev0\EG2.egg-info
+copying EG2.egg-info\namespace_packages.txt -> eg2-1.0.dev0\EG2.egg-info
+copying EG2.egg-info\top_level.txt -> eg2-1.0.dev0\EG2.egg-info
+copying EG2.egg-info\zip-safe -> eg2-1.0.dev0\EG2.egg-info
+copying uc3m_travel\__init__.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\hotel_management_config.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\hotel_management_exception.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\hotel_manager.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\hotel_reservation.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\hotel_stay.py -> eg2-1.0.dev0\uc3m_travel
+copying uc3m_travel\attributes\__init__.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_arrivaldate.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_credit_card.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_id_card.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_localizer.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_name_surname.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_phone_number.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_room_key.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\attributes\attribute_room_type.py -> eg2-1.0.dev0\uc3m_travel\attributes
+copying uc3m_travel\storage\__init__.py -> eg2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\checkout_json_store.py -> eg2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\json_store.py -> eg2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\reservation_json_store.py -> eg2-1.0.dev0\uc3m_travel\storage
+copying uc3m_travel\storage\stay_json_store.py -> eg2-1.0.dev0\uc3m_travel\storage
+copying EG2.egg-info\SOURCES.txt -> eg2-1.0.dev0\EG2.egg-info
+Writing eg2-1.0.dev0\setup.cfg
 creating dist
 Creating tar archive
-removing 'EG2-1.0.dev0' (and everything under it)
+removing 'eg2-1.0.dev0' (and everything under it)

@@ -4,11 +4,13 @@ from src.main.python.uc3m_travel.hotel_management_exception import HotelManageme
 
 
 class ReservationJsonStore(JsonStore):
+    """Class that contains the methods related to json files in room_reservation"""
     class __ReservationJsonStore(JsonStore):
         def __init__(self):
             pass
         """ReservationJsonStore singleton class"""
         def save_reservation(self, my_reservation):
+            """Method that saves the reservation in the store_reservation file"""
             file_store = JSON_FILES_PATH + "store_reservation.json"
             data_list = self.load_json_list(file_store)
             # compruebo que esta reserva no esta en la lista

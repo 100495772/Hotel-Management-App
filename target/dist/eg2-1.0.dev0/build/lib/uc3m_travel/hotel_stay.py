@@ -71,6 +71,7 @@ class HotelStay():
 
     @classmethod
     def create_guest_arrival_from_file(cls, file_input):
+        """Creates a guest arrival from a file path"""
         input_list = JsonStore.load_json_store(file_input, "Error: file input not found")
 
         # comprobar valores del fichero

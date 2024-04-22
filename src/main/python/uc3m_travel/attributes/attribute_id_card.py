@@ -2,6 +2,7 @@ from src.main.python.uc3m_travel.attributes.attribute import Attribute
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 class IdCard(Attribute):
+    """Class to validate the id card attribute"""
     def __init__(self, attr_value):
         self._validation_pattern = r'^[0-9]{8}[A-Z]{1}$'
         self._error_message = "Invalid IdCard format"
@@ -20,4 +21,3 @@ class IdCard(Attribute):
         return attr_value
 
 s = IdCard('09862840A')
-

@@ -2,6 +2,7 @@ from src.main.python.uc3m_travel.attributes.attribute import Attribute
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 class CreditCard(Attribute):
+    """Class to validate credit card"""
     def __init__(self, attr_value):
         self._validation_pattern = r"^[0-9]{16}"
         self._error_message = "Invalid credit card format"
@@ -22,4 +23,3 @@ class CreditCard(Attribute):
             raise HotelManagementException("Invalid credit card number (not luhn)")
 
         return attr_value
-

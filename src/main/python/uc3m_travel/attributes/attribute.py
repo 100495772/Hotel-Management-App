@@ -1,6 +1,8 @@
+"""Attribute class"""
 import re
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 class Attribute():
+    """Abstract class to validate the input parameters for F1, F2 and F3 methods"""
 
     def __init__(self):
         self._validation_pattern = r""

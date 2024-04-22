@@ -37,19 +37,21 @@ class HotelManager:
             except FileNotFoundError as exception:
                 raise HotelManagementException("Wrong file or file path") from exception
             except json.JSONDecodeError as exception:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
+                raise HotelManagementException("JSON Decode Error - "
+                                               "Wrong JSON Format") from exception
             try:
-                creditCard = json_data["CreditCard"]
-                phoneNumber = json_data["phoneNumber"]
+                credit_card = json_data["CreditCard"]
+                phone_number = json_data["phoneNumber"]
                 req = HotelReservation(id_card="12345678Z",
-                                       credit_card_number=creditCard,
+                                       credit_card_number=credit_card,
                                        name_surname="John Doe",
-                                       phone_number=phoneNumber,
+                                       phone_number=phone_number,
                                        room_type="single",
                                        num_days=3,
                                        arrival="20/01/2024")
             except KeyError as exception:
-                raise HotelManagementException("JSON Decode Error - Invalid JSON Key") from exception
+                raise HotelManagementException("JSON Decode Error -"
+                                               " Invalid JSON Key") from exception
             #if not self.validatecreditcard(creditCard):
                 #raise HotelManagementException("Invalid credit card number")
             # Close the file
@@ -64,7 +66,8 @@ class HotelManager:
                              room_type:str,
                              arrival_date: str,
                              num_days:int)->str:
-            """ Manages the hotel reservation: creates a reservation and saves it into a json file"""
+            """ Manages the hotel reservation: creates a reservation
+             and saves it into a json file"""
 
             # we use the extracted attribute classes to validate
             room_type = str(RoomType(room_type))

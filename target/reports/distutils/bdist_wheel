@@ -33,7 +33,7 @@ copying uc3m_travel\storage\json_store.py -> build\lib\uc3m_travel\storage
 copying uc3m_travel\storage\reservation_json_store.py -> build\lib\uc3m_travel\storage
 copying uc3m_travel\storage\stay_json_store.py -> build\lib\uc3m_travel\storage
 copying uc3m_travel\storage\__init__.py -> build\lib\uc3m_travel\storage
-c:\users\tester\pycharmprojects\g88.2024.t01.eg3\.pybuilder\plugins\cpython-3.12.2.final.0\Lib\site-packages\setuptools\_distutils\cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\.pybuilder\plugins\cpython-3.12.3.final.0\Lib\site-packages\setuptools\_distutils\cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
 !!
 
         ********************************************************************************

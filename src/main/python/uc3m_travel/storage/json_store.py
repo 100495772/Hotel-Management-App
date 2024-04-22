@@ -36,4 +36,3 @@ class JsonStore():
         except json.JSONDecodeError as ex:
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex
         return store_list
-

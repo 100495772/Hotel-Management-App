@@ -4,11 +4,13 @@ from src.main.python.uc3m_travel.hotel_management_exception import HotelManageme
 
 
 class StayJsonStore(JsonStore):
+    """Class that contains the methods related to json files in guest_arrival"""
     class __StayJsonStore(JsonStore):
         def __init__(self):
             pass
         @classmethod
         def find_reservation(cls, my_id_card, my_localizer):
+            """Method that finds the reservation that contains my_id_card and my_localizer"""
             # look in reservation store
             file_store = JSON_FILES_PATH + "store_reservation.json"
             store_list = JsonStore.load_json_store(file_store, "Error: store reservation not found")
@@ -26,6 +28,7 @@ class StayJsonStore(JsonStore):
             return result
 
         def save_stay(self, my_checkin):
+            """Method that saves the stay in the store_check_in file"""
             # Ahora lo guardo en el almacen nuevo de checkin
             # escribo el fichero Json con todos los datos
             file_store = JSON_FILES_PATH + "store_check_in.json"
