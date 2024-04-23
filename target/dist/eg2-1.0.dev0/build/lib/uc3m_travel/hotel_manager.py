@@ -70,9 +70,9 @@ class HotelManager:
              and saves it into a json file"""
 
             # we use the extracted attribute classes to validate
-            room_type = str(RoomType(room_type))
-            id_card = str(IdCard(id_card))
-            arrival_date = str(ArrivalDate(arrival_date))
+            room_type = RoomType(room_type).value
+            id_card = IdCard(id_card).value
+            arrival_date = ArrivalDate(arrival_date).value
             num_days = self.validate_numdays(num_days)
             my_reservation = HotelReservation(id_card=id_card,
                                               credit_card_number=credit_card,
@@ -99,7 +99,7 @@ class HotelManager:
 
         def guest_checkout(self, room_key:str)->bool:
             """manages the checkout of a guest"""
-            room_key = str(RoomKey(room_key))
+            room_key = RoomKey(room_key).value
 
             #check that the roomkey is stored in the checkins file
             my_checkout = CheckoutJsonStore()

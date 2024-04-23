@@ -23,13 +23,13 @@ class HotelReservation:
                  arrival:str,
                  num_days:int):
         """constructor of reservation objects"""
-        self.__credit_card_number = str(CreditCard(credit_card_number))
+        self.__credit_card_number = CreditCard(credit_card_number).value
         self.__id_card = id_card
         justnow = datetime.utcnow()
         self.__arrival = arrival
         self.__reservation_date = datetime.timestamp(justnow)
-        self.__name_surname = str(Name(name_surname))
-        self.__phone_number = str(PhoneNumber(phone_number))
+        self.__name_surname = Name(name_surname).value
+        self.__phone_number = PhoneNumber(phone_number).value
         self.__room_type = room_type
         self.__num_days = num_days
         self.__localizer = hashlib.md5(str(self).encode()).hexdigest()
