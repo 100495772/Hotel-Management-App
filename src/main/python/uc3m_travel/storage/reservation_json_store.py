@@ -29,3 +29,9 @@ class ReservationJsonStore(JsonStore):
         if not ReservationJsonStore.__instance:
             ReservationJsonStore.__instance = ReservationJsonStore.__ReservationJsonStore()
         return ReservationJsonStore.__instance
+
+    def __getattr__(self, item):
+        return getattr(ReservationJsonStore().__instance, item)
+
+    def __setattr__(self, key, value):
+        return setattr(ReservationJsonStore().__instance, key, value)

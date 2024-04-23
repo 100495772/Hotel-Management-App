@@ -47,3 +47,9 @@ class StayJsonStore(JsonStore):
         if not StayJsonStore.__instance:
             StayJsonStore.__instance = StayJsonStore.__StayJsonStore()
         return StayJsonStore.__instance
+
+    def __getattr__(self, item):
+        return getattr(StayJsonStore().__instance, item)
+
+    def __setattr__(self, key, value):
+        return setattr(StayJsonStore().__instance, key, value)

@@ -45,3 +45,9 @@ class CheckoutJsonStore(JsonStore):
         if not CheckoutJsonStore.__instance:
             CheckoutJsonStore.__instance = CheckoutJsonStore.__CheckoutJsonStore()
         return CheckoutJsonStore.__instance
+
+    def __getattr__(self, item):
+        return getattr(CheckoutJsonStore().__instance, item)
+
+    def __setattr__(self, key, value):
+        return setattr(CheckoutJsonStore().__instance, key, value)

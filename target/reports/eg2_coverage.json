@@ -54,7 +54,7 @@
       "branches": 8,
       "branches_missing": 4,
       "branches_partial": 0,
-      "coverage": 78.125,
+      "coverage": 76.47058823529412,
       "lines": [
         2,
         3,
@@ -114,12 +114,16 @@
         106,
         109,
         110,
-        112,
         113,
-        115,
+        114,
         116,
         117,
-        118
+        118,
+        119,
+        121,
+        122,
+        124,
+        125
       ],
       "lines_not_covered": [
         34,
@@ -135,11 +139,13 @@
         45,
         52,
         53,
-        58
+        58,
+        122,
+        125
       ],
       "module": "uc3m_travel.hotel_manager",
-      "sum_lines": 64,
-      "sum_lines_not_covered": 14
+      "sum_lines": 68,
+      "sum_lines_not_covered": 16
     },
     {
       "branches": 26,
@@ -538,7 +544,7 @@
       "branches": 16,
       "branches_missing": 1,
       "branches_partial": 1,
-      "coverage": 100.0,
+      "coverage": 95.0,
       "lines": [
         1,
         2,
@@ -575,12 +581,19 @@
         44,
         45,
         46,
-        47
+        47,
+        49,
+        50,
+        52,
+        53
       ],
-      "lines_not_covered": [],
+      "lines_not_covered": [
+        50,
+        53
+      ],
       "module": "uc3m_travel.storage.checkout_json_store",
-      "sum_lines": 36,
-      "sum_lines_not_covered": 0
+      "sum_lines": 40,
+      "sum_lines_not_covered": 2
     },
     {
       "branches": 12,
@@ -634,7 +647,7 @@
       "branches": 8,
       "branches_missing": 0,
       "branches_partial": 0,
-      "coverage": 100.0,
+      "coverage": 92.5925925925926,
       "lines": [
         1,
         2,
@@ -658,18 +671,25 @@
         28,
         29,
         30,
-        31
+        31,
+        33,
+        34,
+        36,
+        37
       ],
-      "lines_not_covered": [],
+      "lines_not_covered": [
+        34,
+        37
+      ],
       "module": "uc3m_travel.storage.reservation_json_store",
-      "sum_lines": 23,
-      "sum_lines_not_covered": 0
+      "sum_lines": 27,
+      "sum_lines_not_covered": 2
     },
     {
       "branches": 16,
       "branches_missing": 3,
       "branches_partial": 1,
-      "coverage": 94.28571428571429,
+      "coverage": 89.74358974358974,
       "lines": [
         1,
         2,
@@ -705,15 +725,21 @@
         46,
         47,
         48,
-        49
+        49,
+        51,
+        52,
+        54,
+        55
       ],
       "lines_not_covered": [
         38,
-        39
+        39,
+        52,
+        55
       ],
       "module": "uc3m_travel.storage.stay_json_store",
-      "sum_lines": 35,
-      "sum_lines_not_covered": 2
+      "sum_lines": 39,
+      "sum_lines_not_covered": 4
     },
     {
       "branches": 0,
@@ -729,5 +755,5 @@
   ],
   "overall_branch_coverage": 90.98360655737704,
   "overall_branch_partial_coverage": 95.90163934426229,
-  "overall_coverage": 90.95238095238095
+  "overall_coverage": 89.44954128440367
 }

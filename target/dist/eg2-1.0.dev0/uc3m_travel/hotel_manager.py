@@ -108,6 +108,7 @@ class HotelManager:
             # Save the checkout in the checkout store
             checkout_store = CheckoutJsonStore()
             checkout_store.save_checkout(room_key)
+            # CheckoutJsonStore.save_checkout(room_key)
 
             return True
     __instance = None
@@ -116,3 +117,9 @@ class HotelManager:
         if not HotelManager.__instance:
             HotelManager.__instance = HotelManager.__HotelManager()
         return HotelManager.__instance
+
+    def __getattr__(self, item):
+        return getattr(HotelManager().__instance, item)
+
+    def __setattr__(self, key, value):
+        return setattr(HotelManager().__instance, key, value)
