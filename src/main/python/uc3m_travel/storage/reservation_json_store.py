@@ -1,14 +1,16 @@
+"""Store module for methods related to json files in room_reservation"""
 from src.main.python.uc3m_travel.storage.json_store import JsonStore
 from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 
+# pylint: disable=invalid-name
 class ReservationJsonStore(JsonStore):
     """Class that contains the methods related to json files in room_reservation"""
     class __ReservationJsonStore(JsonStore):
+        """ReservationJsonStore singleton class"""
         def __init__(self):
             pass
-        """ReservationJsonStore singleton class"""
         def save_reservation(self, my_reservation):
             """Method that saves the reservation in the store_reservation file"""
             file_store = JSON_FILES_PATH + "store_reservation.json"
@@ -24,14 +26,14 @@ class ReservationJsonStore(JsonStore):
             # escribo la lista en el fichero
             self.dump_list(data_list, file_store)
 
-    __instance = None
+    instance = None
     def __new__(cls):
-        if not ReservationJsonStore.__instance:
-            ReservationJsonStore.__instance = ReservationJsonStore.__ReservationJsonStore()
-        return ReservationJsonStore.__instance
+        if not ReservationJsonStore.instance:
+            ReservationJsonStore.instance = ReservationJsonStore.__ReservationJsonStore()
+        return ReservationJsonStore.instance
 
     def __getattr__(self, item):
-        return getattr(ReservationJsonStore().__instance, item)
+        return getattr(ReservationJsonStore().instance, item)
 
     def __setattr__(self, key, value):
-        return setattr(ReservationJsonStore().__instance, key, value)
+        return setattr(ReservationJsonStore().instance, key, value)

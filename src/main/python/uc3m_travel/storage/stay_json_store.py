@@ -1,8 +1,10 @@
+"""Store module for methods related to json files in guest_arrival"""
 from src.main.python.uc3m_travel.storage.json_store import JsonStore
 from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 
+# pylint: disable=invalid-name
 class StayJsonStore(JsonStore):
     """Class that contains the methods related to json files in guest_arrival"""
     class __StayJsonStore(JsonStore):
@@ -41,15 +43,15 @@ class StayJsonStore(JsonStore):
             room_key_list.append(my_checkin.__dict__)
             self.dump_list(room_key_list, file_store)
 
-    __instance = None
+    instance = None
 
     def __new__(cls):
-        if not StayJsonStore.__instance:
-            StayJsonStore.__instance = StayJsonStore.__StayJsonStore()
-        return StayJsonStore.__instance
+        if not StayJsonStore.instance:
+            StayJsonStore.instance = StayJsonStore.__StayJsonStore()
+        return StayJsonStore.instance
 
     def __getattr__(self, item):
-        return getattr(StayJsonStore().__instance, item)
+        return getattr(StayJsonStore().instance, item)
 
     def __setattr__(self, key, value):
-        return setattr(StayJsonStore().__instance, key, value)
+        return setattr(StayJsonStore().instance, key, value)

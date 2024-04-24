@@ -1,9 +1,11 @@
+"""Store module for methods related to json files in guest_checkout"""
 from datetime import datetime
 from src.main.python.uc3m_travel.storage.json_store import JsonStore
 from src.main.python.uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
 
+# pylint: disable=invalid-name
 class CheckoutJsonStore(JsonStore):
     """Class that contains the methods related to json files in guest_checkout"""
     class __CheckoutJsonStore(JsonStore):
@@ -39,15 +41,15 @@ class CheckoutJsonStore(JsonStore):
             room_key_list.append(room_checkout)
             self.dump_list(room_key_list, file_store_checkout)
 
-    __instance = None
+    instance = None
 
     def __new__(cls):
-        if not CheckoutJsonStore.__instance:
-            CheckoutJsonStore.__instance = CheckoutJsonStore.__CheckoutJsonStore()
-        return CheckoutJsonStore.__instance
+        if not CheckoutJsonStore.instance:
+            CheckoutJsonStore.instance = CheckoutJsonStore.__CheckoutJsonStore()
+        return CheckoutJsonStore.instance
 
     def __getattr__(self, item):
-        return getattr(CheckoutJsonStore().__instance, item)
+        return getattr(CheckoutJsonStore().instance, item)
 
     def __setattr__(self, key, value):
-        return setattr(CheckoutJsonStore().__instance, key, value)
+        return setattr(CheckoutJsonStore().instance, key, value)

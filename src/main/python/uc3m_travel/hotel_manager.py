@@ -14,6 +14,8 @@ from src.main.python.uc3m_travel.storage.checkout_json_store import CheckoutJson
 
 class HotelManager:
     """Class with all the methods for managing reservations and stays"""
+
+    # pylint: disable=invalid-name
     class __HotelManager:
         def __init__(self):
             pass
@@ -108,18 +110,17 @@ class HotelManager:
             # Save the checkout in the checkout store
             checkout_store = CheckoutJsonStore()
             checkout_store.save_checkout(room_key)
-            # CheckoutJsonStore.save_checkout(room_key)
 
             return True
-    __instance = None
+    instance = None
 
     def __new__(cls):
-        if not HotelManager.__instance:
-            HotelManager.__instance = HotelManager.__HotelManager()
-        return HotelManager.__instance
+        if not HotelManager.instance:
+            HotelManager.instance = HotelManager.__HotelManager()
+        return HotelManager.instance
 
     def __getattr__(self, item):
-        return getattr(HotelManager().__instance, item)
+        return getattr(HotelManager().instance, item)
 
     def __setattr__(self, key, value):
-        return setattr(HotelManager().__instance, key, value)
+        return setattr(HotelManager().instance, key, value)

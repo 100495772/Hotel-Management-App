@@ -85,6 +85,7 @@ class HotelReservation:
 
     @classmethod
     def create_reservation_from_arrival(cls, my_id_card, my_localizer):
+        """Method that creates a reservation object from a valid id card and localizer"""
         my_id_card = IdCard(my_id_card).value
         my_localizer = Localizer(my_localizer).value
         reservations_store = StayJsonStore()

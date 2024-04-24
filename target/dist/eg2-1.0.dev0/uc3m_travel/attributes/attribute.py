@@ -1,4 +1,4 @@
-"""Attribute class"""
+"""Module for validating attributes"""
 import re
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 class Attribute():

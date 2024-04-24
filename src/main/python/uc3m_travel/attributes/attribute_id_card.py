@@ -1,9 +1,12 @@
+"""Module for validating the id card"""
 from src.main.python.uc3m_travel.attributes.attribute import Attribute
 from src.main.python.uc3m_travel.hotel_management_exception import HotelManagementException
 
+# pylint: disable=too-few-public-methods
 class IdCard(Attribute):
     """Class to validate the id card attribute"""
     def __init__(self, attr_value):
+        super().__init__()
         self._validation_pattern = r'^[0-9]{8}[A-Z]{1}$'
         self._error_message = "Invalid IdCard format"
         self._attr_value = self._validate(attr_value)

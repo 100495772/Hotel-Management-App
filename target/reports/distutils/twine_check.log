@@ -1,8 +1,8 @@
 Checking 
-/Users/ilimi/PycharmProjects/G88.2024.T01.EG3/target/dist/EG2-1.0.dev0/dist/EG2-
-1.0.dev0-py3-none-any.whl: [33mPASSED with warnings[0m
-[33mWARNING [0m `long_description_content_type` missing. defaulting to `text/x-rst`.   
+c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\target\dist\eg2-1.0.dev0\di
+st\EG2-1.0.dev0-py3-none-any.whl: PASSED with warnings
+WARNING  `long_description_content_type` missing. defaulting to `text/x-rst`.  
 Checking 
-/Users/ilimi/PycharmProjects/G88.2024.T01.EG3/target/dist/EG2-1.0.dev0/dist/EG2-
-1.0.dev0.tar.gz: [33mPASSED with warnings[0m
-[33mWARNING [0m `long_description_content_type` missing. defaulting to `text/x-rst`.   
+c:\users\davidmaba\pycharmprojects\g88.2024.t01.eg3\target\dist\eg2-1.0.dev0\di
+st\eg2-1.0.dev0.tar.gz: PASSED with warnings
+WARNING  `long_description_content_type` missing. defaulting to `text/x-rst`.  
