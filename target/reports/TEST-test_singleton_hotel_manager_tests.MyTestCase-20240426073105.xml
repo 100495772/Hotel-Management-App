@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_singleton_hotel_manager_tests.MyTestCase-20240426073105" tests="5" file="test_singleton_hotel_manager_tests.py" time="0.009" timestamp="2024-04-26T07:31:06" failures="0" errors="0" skipped="0">
+	<testcase classname="test_singleton_hotel_manager_tests.MyTestCase" name="test_class_with_no_singleton" time="0.002" timestamp="2024-04-26T07:31:06"/>
+	<testcase classname="test_singleton_hotel_manager_tests.MyTestCase" name="test_singleton_CheckoutJsonStore" time="0.002" timestamp="2024-04-26T07:31:06"/>
+	<testcase classname="test_singleton_hotel_manager_tests.MyTestCase" name="test_singleton_ReservationJsonStore" time="0.002" timestamp="2024-04-26T07:31:06"/>
+	<testcase classname="test_singleton_hotel_manager_tests.MyTestCase" name="test_singleton_StayJsonStore" time="0.002" timestamp="2024-04-26T07:31:06"/>
+	<testcase classname="test_singleton_hotel_manager_tests.MyTestCase" name="test_singleton_hotel_manager" time="0.002" timestamp="2024-04-26T07:31:06"/>
+</testsuite>
