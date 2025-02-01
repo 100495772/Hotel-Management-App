@@ -1,2 +1,3 @@
-# G8X.2024.T00.EG2
-Guided Exercise 2
+Desarrollo de un sistema de gestión de reservas de hotel 
+*Tecnologías: Python, PyBuilder, JSON, SHA-256, MD5*  
+Implementación de un sistema de gestión de reservas de hotel utilizando Test-Driven Development (TDD). Se desarrollaron funciones clave como la solicitud de reservas, el registro de llegada y el checkout. Se aplicaron técnicas de pruebas funcionales y estructurales, documentando casos de prueba y garantizando la calidad del código con pylint. El proyecto incluyó automatización de pruebas y control de versiones en GitHub, siguiendo principios de colaboración en equipo y propiedad colectiva del código.
